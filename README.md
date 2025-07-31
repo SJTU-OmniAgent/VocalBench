@@ -561,8 +561,8 @@ cd utils
 
 - [Whisper](https://huggingface.co/openai/whisper-large-v3): VocalBench uses Whisper for speech recognition.
 - [Emotion2vec](https://huggingface.co/emotion2vec/emotion2vec_plus_large): VocalBench uses emotion2vec_plus_large for emotion recognition.
-- [UTMOS](https://github.com/sarulab-speech/UTMOS22): VocalNet uses UTMOS to quantify the acoustic quality.
-- [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/): VocalNet uses Qwen2.5-Max for LLM evaluation.
+- [UTMOS](https://github.com/sarulab-speech/UTMOS22): VocalBench uses UTMOS to quantify the acoustic quality.
+- [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/): VocalBench uses Qwen2.5-Max for LLM evaluation.
 
 <br> 
 <br> 
