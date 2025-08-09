@@ -271,7 +271,7 @@ cd utils
         <td>Single-round</td>
         <td>Multi-round</td>
         <td>Instruction Following</td>
-        <td>Emotion-Aware</td>
+        <td>Emotional Empathy</td>
         <td>Safety Alignment</td>
         <td>Latency</td>
         <td>Robustness</td>
@@ -456,6 +456,22 @@ cd utils
         <td>0.4509</td>
         <td>87.27</td>
         <td>63.886</td>
+      </tr>
+      <tr>
+        <td>LLaMA-Omni2-7B</td>
+        <td>53.70</td>
+        <td>3.475</td>
+        <td>2.8575</td>
+        <td>4.459</td>
+        <td>3.155</td>
+        <td>3.340</td>
+        <td>3.5875</td>
+        <td>30.67</td>
+        <td>6.511</td>
+        <td>51.00</td>
+        <td>0.4297</td>
+        <td>85.15</td>
+        <td>64.624</td>
       </tr>
       <tr>
         <td>VITA-Audio-Plus-Vanilla</td>
