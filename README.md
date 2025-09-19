@@ -442,6 +442,22 @@ cd utils
         <td>62.382</td>
       </tr>
       <tr>
+        <td>LLaMA-Omni2-7B-Bilingual</td>
+        <td>47.75</td>
+        <td>3.066</td>
+        <td>2.8800</td>
+        <td><b>4.461<br></td>
+        <td>2.744</td>
+        <td>3.365</td>
+        <td>3.5700</td>
+        <td>21.33</td>
+        <td>6.445</td>
+        <td>36.25</td>
+        <td>0.4171</td>
+        <td>90.94</td>
+        <td>62.702</td>
+      </tr>
+      <tr>
         <td>MiniCPM-o 2.6</td>
         <td><b>70.00<br></td>
         <td>3.648</td>
@@ -462,7 +478,7 @@ cd utils
         <td>53.70</td>
         <td>3.475</td>
         <td>2.8575</td>
-        <td><b>4.459<br></td>
+        <td>4.459</td>
         <td>3.155</td>
         <td>3.340</td>
         <td>3.5875</td>
