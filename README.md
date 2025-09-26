@@ -555,6 +555,22 @@ cd utils
         <td>-</td>
         <td>90.64</td>
         <td>70.729</td>
+      </tr>
+      <tr>
+        <td>GPT Realtime</td>
+        <td><b>91.30<br></td>
+        <td><b>4.692<br></td>
+        <td><b>3.9300<br></td>
+        <td>4.162</td>
+        <td>6.042</td>
+        <td><b>4.665<br></td>
+        <td>-</td>
+        <td><b>61.11<br></td>
+        <td><b>7.996<br></td>
+        <td>90.25</td>
+        <td>-</td>
+        <td>48.22</td>
+        <td><b>77.230<br></td>
       </tr>  
       <tr>
         <td colspan="14">Cascade System</td>
