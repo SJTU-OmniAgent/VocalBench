@@ -397,7 +397,7 @@ cd utils
         <td>Baichuan-Omni-1.5</td>
         <td>49.85</td>
         <td>3.770</td>
-        <td><b>3.5900<br></td>
+        <td>3.5900</td>
         <td>4.014</td>
         <td>23.452</td>
         <td><b>3.840<br></td>
@@ -522,6 +522,22 @@ cd utils
         <td>73.327</td>
       </tr>
       <tr>
+        <td>Mimo-Audio-Instruct</td>
+        <td>65.20</td>
+        <td>4.050</td>
+        <td><b>3.6775<br></td>
+        <td>3.070</td>
+        <td>5.342</td>
+        <td><b>4.555<br></td>
+        <td>-</td>
+        <td>41.22</td>
+        <td><b>7.560<br></td>
+        <td>79.00</td>
+        <td>0.6824</td>
+        <td>82.46</td>
+        <td>74.106</td>
+      </tr>
+      <tr>
         <td>VocalNet-8B</td>
         <td>67.95</td>
         <td>3.748</td>
@@ -531,7 +547,7 @@ cd utils
         <td>3.530</td>
         <td>3.9175</td>
         <td>35.89</td>
-        <td><b>7.117<br></td>
+        <td>7.117</td>
         <td><b>92.25<br></td>
         <td>0.2496</td>
         <td>92.66</td>
