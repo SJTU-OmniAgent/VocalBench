@@ -458,6 +458,22 @@ cd utils
         <td>62.702</td>
       </tr>
       <tr>
+        <td>Step-Audio-2-Mini</td>
+        <td>58.50</td>
+        <td>3.672</td>
+        <td>3.2125</td>
+        <td>4.518</td>
+        <td>40.069</td>
+        <td>3.440</td>
+        <td>3.7300</td>
+        <td>34.56</td>
+        <td>6.127</td>
+        <td>80.75</td>
+        <td>5.2988</td>
+        <td>87.77</td>
+        <td>62.840</td>
+      </tr>
+      <tr>
         <td>MiniCPM-o 2.6</td>
         <td><b>70.00<br></td>
         <td>3.648</td>
