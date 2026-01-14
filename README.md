@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-HuggingFace <a href="https://huggingface.co/datasets/VocalNet/VocalBench">🤗</a> | ModelScope <a href="https://modelscope.cn/datasets/VocalNet/VocalBench">🔮</a>  | Paper <a href="">📖</a> 
+HuggingFace <a href="https://huggingface.co/datasets/VocalNet/VocalBench">🤗</a> |  Paper <a href="">📖</a> 
 </p>
 <p align="center">
 Shanghai Jiao Tong University</a>  |  Ant Group</a> 
@@ -26,238 +26,25 @@ Shanghai Jiao Tong University</a>  |  Ant Group</a>
 - **Chat**: Performance on effienct and smooth chat, consisting of single- and multi-round, instruction following, emotion-aware, safety alignment sets, and a real-time factor calculation representing the computing latency.
 - **Robustness**: Robustness under diverse acoustic environments, performing on white noise, background noise, reverberation, far-field, packet loss, and clipping distortion.
 
-<div align="center">
-  <table style="margin: 0 auto; text-align: center;">
-    <thead>
-      <tr>
-         <th class="tg-c3ow" colspan="9"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Dimension</td>
-        <td>Ability</td>
-        <td>Category</td>
-        <td>Instances</td>
-        <td>Annotations</td>
-        <td>Source</td>
-        <td>Evaluation Method / Indicator</td>
-      </tr>
-      <tr>
-        <td rowspan="3">Semantic</td>
-        <td>Knowlegde</td>
-        <td>13</td>
-        <td>2000</td>
-        <td>Topic</td>
-        <td>LLaMA-Q, Web-Q, TriviaQA, SciQ</td>
-        <td>Rule-based / Accuracy</td>
-      </tr>
-      <tr>
-        <td>Reasoning</td>
-        <td>8</td>
-        <td>1000</td>
-        <td>Category</td>
-        <td>CommonsenseQA, gsm8k, STORAL, LLM-generated, self-made</td>
-        <td>LLM-Eval / Score</td>
-      </tr>
-      <tr>
-        <td>Creativity</td>
-        <td>6</td>
-        <td>400</td>
-        <td>Category</td>
-        <td>Web, LLM-generated, self-made </td>
-        <td>LLM Eval / Score</td>
-      </tr>
-      <tr>
-      <td rowspan="2">Acoustic</td>
-        <td>Fluency</td>
-        <td> - </td>
-        <td> - </td>
-        <td> - </td>
-        <td> Single-round set </td>
-        <td> UTMOS </td>
-      </tr>
-      <tr>
-        <td>Clarity</td>
-        <td> - </td>
-        <td> - </td>
-        <td> - </td>
-        <td> Single-round set </td>
-        <td> WER </td>
-      </tr>
-      <tr>
-        <td rowspan="6">Chat</td>
-        <td>Single-Round</td>
-        <td>2</td>
-        <td>200</td>
-        <td>Category</td>
-        <td>AlpacaEval, LLM-generated, self-made</td>
-        <td>LLM Eval / Score</td>
-      </tr>
-      <tr>
-        <td>Multi-round</td>
-        <td>13</td>
-        <td>400</td>
-        <td>Category</td>
-        <td>mt-bench-101</td>
-        <td>LLM Eval / Score</td>
-      </tr>
-      <tr>
-        <td>Instruction Following</td>
-        <td>16</td>
-        <td>900</td>
-        <td>Category, Sub-category</td>
-        <td>FollowBench, InfoBench, etc.; LLM-generated, self-made</td>
-        <td>LLM Eval / Following Rate</td>
-      </tr>
-      <tr>
-        <td>Emotion Aware</td>
-        <td>5</td>
-        <td>500</td>
-        <td>Question Emo etc.</td>
-        <td>LLM-generated, self-made</td>
-        <td>Semantic + Acoustic Score</td>
-      </tr>
-      <tr>
-        <td>Safety Alignment</td>
-        <td>1</td>
-        <td>400</td>
-        <td>Category</td>
-        <td>SafetyTrainig (test)</td>
-        <td>LLM Eval / Refusal Rate</td>
-      </tr>
-      <tr>
-        <td>Latency</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>Single-round set</td>
-        <td>RTF</td>
-      </tr>
-      <tr>
-        <td rowspan="5">Robustness</td>
-        <td>Noise</td>
-        <td>2</td>
-        <td>1200</td>
-        <td>Category, Severeness</td>
-        <td>Single-round set</td>
-        <td>LLM Eval / Score, Preserve Rate</td>
-      </tr>
-      <tr>
-        <td>Reverberation</td>
-        <td>1</td>
-        <td>600</td>
-        <td>Category, Severeness</td>
-        <td>Single-round set</td>
-        <td>LLM Eval / Score, Preserve Rate</td>
-      </tr>
-      <tr>
-        <td>Far-field</td>
-        <td>1</td>
-        <td>800</td>
-        <td>Category, Severeness</td>
-        <td>Single-round set</td>
-        <td>LLM Eval / Score, Preserve Rate</td>
-      </tr>
-      <tr>
-        <td>Packet Loss</td>
-        <td>1</td>
-        <td>500</td>
-        <td>Category, Severeness</td>
-        <td>Single-round set</td>
-        <td>LLM Eval / Score, Preserve Rate</td>
-      </tr>
-      <tr>
-        <td>Clipping Distortion</td>
-        <td>1</td>
-        <td>500</td>
-        <td>Category, Severeness</td>
-        <td>Single-round set</td>
-        <td>LLM Eval / Score, Preserve Rate</td>
-      </tr>
-      <tr>
-        <td><b>Total<br></td>
-        <td>-</td>
-        <td>-</td>
-        <td><b>9400<br></td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-    <thead>
-      <tr>
-         <th class="tg-c3ow" colspan="11"></th>
-      </tr>
-    </thead>
-    </tbody>
-  </table>
-</div>
+## 👀 News
 
-<br> 
-<br> 
+- **2025.5**: The paper, datasets and paper of VocalBench are released, comprising systematic English conversational capability assessments.
+- **2025.11**: We have extended VocalBench to include Mandarin subsets for multilingual evaluations.
+- **2026.1**: We have updated the evaluation criteria, significantly expanded the model coverage, and updated the technical report.
 
 ## 🙌 Quick Start
 
-### Step 0: Model Preparartion
-
-- Environment Preparartion:
-```bash
-cd tools/emotion2vec_plus_large
-huggingface-cli download emotion2vec/emotion2vec_plus_large --local-dir .
-echo -e "angry\nunuse_0\nunuse_1\nhappy\nneutral\nunuse_2\nsad\nsurprised\n<unk>" > tokens.txt
-cd ../whisper
-huggingface-cli download openai/whisper-large-v3 --local-dir .
-cd ../
-git clone https://huggingface.co/spaces/sarulab-speech/UTMOS-demo
-cd UTMOS-demo
-pip install -r requirements.txt
-ln -s fairseq ../../utils/utmos_utils
-cd ../..
-pip install -r requirements.txt
-```
-
-- Query Audio Download from [HuggingFace](https://huggingface.co/datasets/VocalNet/VocalBench) or [ModelScope](https://modelscope.cn/datasets/VocalNet/VocalBench).
-
-
-### Step 1: Speech Interaction Model Infer
-
-Example inference result: result/llama-omni
-
-### Step 2: Perform Whisper ASR
-```bash
-cd utils
-./run_asr.sh
-```
-### Step 3: Perform Qwen2.5-Max Eval & Emotion Acoustic Eval
-```bash
-cd utils
-./run_qwenmax_eval.sh
-```
-### Step 4: Read Score for Each Set and Calculate Overall Performance
-```bash
-cd utils
-./gen_score.sh
-```
-
-
-
-
-
-
-
+Evaluation Scripts will be uploaded soon.
 
 
 ## 🏆 Leaderboard
 
 
-
-
-
 <div align="center">
   <table style="margin: 0 auto; text-align: center;">
     <thead>
       <tr>
-         <th class="tg-c3ow" colspan="14"></th>
+         <th class="tg-c3ow" colspan="15"></th>
       </tr>
     </thead>
     <tbody>
@@ -273,355 +60,461 @@ cd utils
         <td>Instruction Following</td>
         <td>Emotional Empathy</td>
         <td>Safety Alignment</td>
-        <td>Latency</td>
+        <td colspan="2">Latency</td>
         <td>Robustness</td>
         <td rowspan="2">Overall</td>
       </tr>
       <tr>
-        <td>Acc(%)</td>
-        <td>Score</td>
+        <td>ACC(%)</td>
+        <td>ACC(%)</td>
         <td>Score</td>
         <td>UTMOS</td>
         <td>WER(%)</td>
         <td>Score</td>
-        <td>Score</td>
+        <td>ACC(%)</td>
         <td>FR(%)</td>
-        <td>Score</td>
+        <td>ERR(%)</td>
         <td>RR(%)</td>
         <td>RTF</td>
-        <td>Avg PR (%)</td>
+        <td>FCL</td>
+        <td>PR(%)</td>
       </tr>
       <tr>
-        <td colspan="14">Tiny Models</td>
+        <td colspan="14">Tiny-sized Models</td>
       </tr>
       <tr>
         <td>Mini-Omni</td>
-        <td>2.20</td>
-        <td>1.291</td>
-        <td>1.4725</td>
+        <td>2.25</td>
+        <td>1.1</td>
+        <td>1.448</td>
         <td>4.435</td>
         <td>19.571</td>
-        <td>1.645</td>
+        <td>1.640</td>
         <td> - </td>
-        <td>0</td>
-        <td>5.428</td>
+        <td>2.78</td>
+        <td>21.4</td>
         <td>81.25</td>
         <td>0.3781</td>
-        <td>84.14</td>
-        <td>40.646</td>
+        <td>1115.71</td>
+        <td>87.631</td>
+        <td>35.633</td>
       </tr>
       <tr>
         <td>Mini-Omni2</td>
-        <td>4.65</td>
-        <td>1.501</td>
-        <td>1.8025</td>
+        <td>4.75</td>
+        <td>2.9</td>
+        <td>1.828</td>
         <td>4.413</td>
         <td>36.269</td>
-        <td>1.915</td>
+        <td>1.835</td>
         <td> - </td>
-        <td>0.11</td>
-        <td>5.709</td>
+        <td>3.67</td>
+        <td>35.8</td>
         <td>88.50</td>
         <td>0.2001</td>
-        <td>82.26</td>
-        <td>43.224</td>
+        <td>911.64</td>
+        <td>86.004</td>
+        <td>38.201</td>
       </tr>
       <tr>
         <td>SLAM-Omni</td>
-        <td>12.05</td>
-        <td>1.875</td>
-        <td>2.5175</td>
+        <td>12.55</td>
+        <td>9.2</td>
+        <td>2.538</td>
         <td>4.424</td>
         <td>6.065</td>
-        <td>2.880</td>
-        <td>1.9800</td>
-        <td>3.11</td>
-        <td>6.452</td>
+        <td>3.295</td>
+        <td>7.25</td>
+        <td>9.33</td>
+        <td>49.8</td>
         <td><b>90.25<br></td>
         <td>0.4925</td>
-        <td>77.91</td>
-        <td>54.649</td>
+        <td>742.32</td>
+        <td>75.356</td>
+        <td>51.505</td>
       </tr>
       <tr>
         <td>VocalNet-1B</td>
-        <td><b>43.00<br></td>
-        <td><b>2.869<br></td>
-        <td><b>3.1800<br></td>
+        <td>46.65</td>
+        <td>31.3</td>
+        <td>3.425</td>
         <td><b>4.437<br></td>
-        <td><b>5.123<br></td>
-        <td><b>3.335<br></td>
-        <td><b>3.2550<br></td>
-        <td><b>16.11<br></td>
-        <td><b>6.754<br></td>
+        <td>5.123</td>
+        <td><b>3.790<br></td>
+        <td>45.50</td>
+        <td>25.78</td>
+        <td>46.6</td>
         <td>89.00</td>
         <td><b>0.1632<br></td>
-        <td><b>92.42<br></td>
-        <td><b>66.632<br></td>
+        <td><b>414.05<br></td>
+        <td>89.402</td>
+        <td>64.210</td>
       </tr>
       <tr>
-        <td colspan="14">Base Models</td>
+        <td>VocalNet2-1.7B</td>
+        <td><b>47.40<br></td>
+        <td><b>56.1<br></td>
+        <td><b>3.493<br></td>
+        <td>4.353</td>
+        <td><b>1.775<br></td>
+        <td>3.710</td>
+        <td><b>58.00<br></td>
+        <td><b>48.22<br></td>
+        <td><b>51.6<br></td>
+        <td>82.75</td>
+        <td>0.3164</td>
+        <td>673.50</td>
+        <td><b>93.801<br></td>
+        <td><b>71.435<br></td>
+      </tr>
+      <tr>
+        <td colspan="14">Base-sized Models</td>
       </tr>
       <tr>
         <td>LLaMA-Omni</td>
-        <td>37.40</td>
-        <td>2.591</td>
-        <td>2.8475</td>
+        <td>54.70</td>
+        <td>33.6</td>
+        <td>3.195</td>
         <td>3.959</td>
         <td>2.842</td>
-        <td>3.300</td>
-        <td>3.1525</td>
-        <td>14.89</td>
-        <td>6.128</td>
+        <td>3.795</td>
+        <td>48.25</td>
+        <td>28.67</td>
+        <td>35.4</td>
         <td>27.75</td>
         <td><b>0.0958<br></td>
-        <td>83.59</td>
-        <td>57.107</td>
-      </tr>
-      <tr>
-        <td>Freeze-Omni</td>
-        <td>44.25</td>
-        <td>3.530</td>
-        <td>2.8850</td>
-        <td>4.381</td>
-        <td>11.460</td>
-        <td>2.960</td>
-        <td>-</td>
-        <td>12.05</td>
-        <td>6.164</td>
-        <td>86.50</td>
-        <td>0.2618</td>
-        <td>65.25</td>
-        <td>58.362</td>
+        <td><b>283.19<br></td>
+        <td>79.787</td>
+        <td>56.919</td>
       </tr>
       <tr>
         <td>Baichuan-Omni-1.5</td>
-        <td>49.85</td>
-        <td>3.770</td>
-        <td>3.5900</td>
+        <td>68.65</td>
+        <td>69.9</td>
+        <td>3.838</td>
         <td>4.014</td>
         <td>23.452</td>
-        <td><b>3.840<br></td>
+        <td>4.110</td>
         <td>-</td>
-        <td>28.89</td>
-        <td>5.424</td>
+        <td>44.56</td>
+        <td>23.3</td>
         <td>83.00</td>
         <td>1.4900</td>
-        <td>74.85</td>
-        <td>60.239</td>
+        <td>19882.89</td>
+        <td>73.080</td>
+        <td>59.812</td>
+      </tr>
+      <tr>
+        <td>Freeze-Omni</td>
+        <td>62.70</td>
+        <td>60.8</td>
+        <td>3.380</td>
+        <td>4.381</td>
+        <td>11.460</td>
+        <td>3.030</td>
+        <td>-</td>
+        <td>26.22</td>
+        <td>42.2</td>
+        <td>86.50</td>
+        <td>0.2618</td>
+        <td>557.25</td>
+        <td>65.952</td>
+        <td>59.936</td>
       </tr>
       <tr>
         <td>GLM-4-Voice</td>
-        <td>56.40</td>
-        <td>3.641</td>
-        <td>3.2900</td>
+        <td>59.85</td>
+        <td>54.1</td>
+        <td>3.670</td>
         <td>3.869</td>
         <td>11.565</td>
-        <td>3.615</td>
-        <td>3.7300</td>
-        <td>31.67</td>
-        <td>6.904</td>
+        <td>3.935</td>
+        <td>65.25</td>
+        <td>43.22</td>
+        <td>48.2</td>
         <td>71.50</td>
         <td>0.7870</td>
-        <td>57.10</td>
-        <td>61.388</td>
+        <td>1066.02</td>
+        <td>57.179</td>
+        <td>60.343</td>
       </tr>
       <tr>
-        <td>Kimi-Audio</td>
-        <td>62.15</td>
-        <td>3.132</td>
-        <td>3.0950</td>
-        <td>2.360</td>
-        <td>38.001</td>
-        <td>3.150</td>
-        <td>3.5350</td>
-        <td><b>48.59<br></td>
-        <td>6.838</td>
-        <td>83.35</td>
-        <td>0.7331</td>
-        <td><b>93.20<br></td>
-        <td>62.382</td>
-      </tr>
-      <tr>
-        <td>LLaMA-Omni2-7B-Bilingual</td>
-        <td>47.75</td>
-        <td>3.066</td>
-        <td>2.8800</td>
+        <td>LLaMA-Omni2-Bilingual</td>
+        <td>51.60</td>
+        <td>42.1</td>
+        <td>3.093</td>
         <td><b>4.461<br></td>
         <td>2.744</td>
-        <td>3.365</td>
-        <td>3.5700</td>
-        <td>21.33</td>
-        <td>6.445</td>
+        <td>3.795</td>
+        <td>62.00</td>
+        <td>41.22</td>
+        <td>40.2</td>
         <td>36.25</td>
         <td>0.4171</td>
-        <td>90.94</td>
-        <td>62.702</td>
+        <td>1377.00</td>
+        <td>83.201</td>
+        <td>60.853</td>
       </tr>
       <tr>
         <td>Step-Audio-2-Mini</td>
-        <td>58.50</td>
-        <td>3.672</td>
-        <td>3.2125</td>
+        <td>58.90</td>
+        <td>61.1</td>
+        <td>3.505</td>
         <td>4.518</td>
         <td>40.069</td>
-        <td>3.440</td>
-        <td>3.7300</td>
-        <td>34.56</td>
-        <td>6.127</td>
+        <td>4.085</td>
+        <td>58.75</td>
+        <td>47.22</td>
+        <td>37.0</td>
         <td>80.75</td>
         <td>5.2988</td>
-        <td>87.77</td>
-        <td>62.840</td>
+        <td>1834.76</td>
+        <td>84.453</td>
+        <td>60.863</td>
       </tr>
       <tr>
         <td>MiniCPM-o 2.6</td>
-        <td><b>70.00<br></td>
-        <td>3.648</td>
-        <td>3.3550</td>
+        <td><b>75.15<br></td>
+        <td>69.3</td>
+        <td>3.755</td>
         <td>4.054</td>
         <td>18.735</td>
-        <td>3.165</td>
-        <td>3.6675</td>
-        <td>30.00</td>
-        <td>7.080</td>
+        <td>3.670</td>
+        <td>65.25</td>
+        <td>42.78</td>
+        <td>59.8</td>
         <td>83.25</td>
         <td>0.4509</td>
-        <td>87.27</td>
-        <td>63.886</td>
+        <td>1329.52</td>
+        <td>83.880</td>
+        <td>65.514</td>
       </tr>
       <tr>
-        <td>LLaMA-Omni2-7B</td>
-        <td>53.70</td>
-        <td>3.475</td>
-        <td>2.8575</td>
+        <td>LLaMA-Omni2</td>
+        <td>59.65</td>
+        <td>58.4</td>
+        <td>3.145</td>
         <td>4.459</td>
         <td>3.155</td>
-        <td>3.340</td>
-        <td>3.5875</td>
-        <td>30.67</td>
-        <td>6.511</td>
+        <td>3.735</td>
+        <td>56.00</td>
+        <td>48.78</td>
+        <td>42.4</td>
         <td>51.00</td>
         <td>0.4297</td>
-        <td>85.15</td>
-        <td>64.624</td>
+        <td>1396.93</td>
+        <td>85.746</td>
+        <td>66.104</td>
       </tr>
       <tr>
-        <td>VITA-Audio-Plus-Vanilla</td>
-        <td>52.00</td>
-        <td>4.183</td>
-        <td>3.2800</td>
+        <td>Kimi-Audio</td>
+        <td>72.60</td>
+        <td>79.4</td>
+        <td>3.640</td>
+        <td>2.360</td>
+        <td>38.001</td>
+        <td>4.280</td>
+        <td>69.75</td>
+        <td><b>56.22<br></td>
+        <td><b>61.1<br></td>
+        <td>83.75</td>
+        <td>0.7331</td>
+        <td>1371.48</td>
+        <td>85.620</td>
+        <td>66.350</td>
+      </tr>
+      <tr>
+        <td>VocalNet-ML</td>
+        <td>61.55</td>
+        <td>64.7</td>
+        <td>3.345</td>
+        <td>4.359</td>
+        <td>5.786</td>
+        <td>3.915</td>
+        <td>65.50</td>
+        <td>36.44</td>
+        <td>59.2</td>
+        <td>86.25</td>
+        <td>0.2377</td>
+        <td>550.07</td>
+        <td><b>95.621<br></td>
+        <td>72.036</td>
+      </tr>
+      <tr>
+        <td>VITA-Audio</td>
+        <td>56.15</td>
+        <td>75.6</td>
+        <td>3.613</td>
         <td>4.173</td>
         <td>4.858</td>
-        <td>3.520</td>
+        <td>3.970</td>
         <td>-</td>
-        <td>33.59</td>
-        <td>6.843</td>
+        <td>52.06</td>
+        <td>49.8</td>
         <td>88.25</td>
         <td>0.4645</td>
-        <td>89.53</td>
-        <td>71.795</td>
+        <td>512.64</td>
+        <td>89.327</td>
+        <td>72.923</td>
       </tr>
       <tr>
         <td>Qwen2.5-Omni</td>
-        <td>69.50</td>
-        <td><b>4.361<br></td>
-        <td>3.1825</td>
+        <td>71.00</td>
+        <td>73.9</td>
+        <td>3.445</td>
         <td>4.174</td>
         <td><b>1.154<br></td>
-        <td>3.538</td>
-        <td><b>4.0125<br></td>
-        <td>27.00</td>
-        <td>6.386</td>
+        <td>3.800</td>
+        <td>71.50</td>
+        <td>39.67</td>
+        <td>45.2</td>
         <td>71.75</td>
         <td>1.7243</td>
-        <td>91.86</td>
-        <td>73.327</td>
+        <td>-</td>
+        <td>91.156</td>
+        <td>72.489</td>
       </tr>
       <tr>
-        <td>Mimo-Audio-Instruct</td>
-        <td>65.20</td>
-        <td>4.050</td>
-        <td><b>3.6775<br></td>
+        <td>MiMo-Audio-Instruct</td>
+        <td>67.00</td>
+        <td>68.7</td>
+        <td><b>4.128<br></td>
         <td>3.070</td>
         <td>5.342</td>
-        <td><b>4.555<br></td>
+        <td><b>4.865<br></td>
         <td>-</td>
-        <td>41.22</td>
-        <td><b>7.560<br></td>
+        <td>53.78</td>
+        <td>45.3</td>
         <td>79.00</td>
         <td>0.6824</td>
-        <td>82.46</td>
-        <td>74.106</td>
+        <td>-</td>
+        <td>81.612</td>
+        <td>72.675</td>
       </tr>
       <tr>
         <td>VocalNet-8B</td>
-        <td>67.95</td>
-        <td>3.748</td>
-        <td>3.5050</td>
+        <td>70.95</td>
+        <td>56.3</td>
+        <td>3.858</td>
         <td>4.449</td>
         <td>4.686</td>
-        <td>3.530</td>
-        <td>3.9175</td>
-        <td>35.89</td>
-        <td>7.117</td>
+        <td>4.125</td>
+        <td>70.75</td>
+        <td>45.44</td>
+        <td>49.2</td>
         <td><b>92.25<br></td>
         <td>0.2496</td>
-        <td>92.66</td>
-        <td><b>74.639<br></td>
+        <td>522.22</td>
+        <td>91.136</td>
+        <td>73.498</td>
       </tr>
       <tr>
-        <td colspan="14">Real Time API</td>
+        <td>VocalNet2-8B</td>
+        <td>72.10</td>
+        <td>75.0</td>
+        <td>3.733</td>
+        <td>4.355</td>
+        <td>4.005</td>
+        <td><b>4.210<br></td>
+        <td>72.00</td>
+        <td>53.44</td>
+        <td>52.8</td>
+        <td>91.50</td>
+        <td>0.3860</td>
+        <td>732.91</td>
+        <td>92.728</td>
+        <td>76.633</td>
       </tr>
       <tr>
-        <td>Qwen-Omni-Turbo</td>
-        <td>64.95</td>
-        <td>4.058</td>
-        <td>3.1575</td>
-        <td>4.405</td>
-        <td>1.656</td>
-        <td>3.420</td>
-        <td>3.9775</td>
-        <td>22.11</td>
-        <td>6.226</td>
-        <td>65.25</td>
+        <td colspan="15">Large-sized Models</td>
+      </tr>
+      <tr>
+        <td>Qwen3-Omni</td>
+        <td>89.35</td>
+        <td>88.5</td>
+        <td>4.770</td>
+        <td>4.381</td>
+        <td>16.820</td>
+        <td><b>4.955<br></td>
+        <td>85.50</td>
+        <td>72.89</td>
+        <td>44.7</td>
+        <td>92.25</td>
         <td>-</td>
-        <td>90.64</td>
-        <td>70.729</td>
+        <td>-</td>
+        <td>94.501</td>
+        <td>78.775</td>
+      </tr>
+      <tr>
+        <td colspan="15">Cascade System & Real Time API</td>
       </tr>
       <tr>
         <td>GPT Realtime</td>
-        <td><b>91.30<br></td>
-        <td><b>4.692<br></td>
-        <td><b>3.9300<br></td>
+        <td><b>91.80<br></td>
+        <td>87.2</td>
+        <td>3.970</td>
         <td>4.162</td>
         <td>6.042</td>
-        <td><b>4.665<br></td>
+        <td>4.720</td>
         <td>-</td>
-        <td><b>61.11<br></td>
-        <td><b>7.996<br></td>
+        <td>74.89</td>
+        <td>50.0</td>
         <td>90.25</td>
         <td>-</td>
-        <td>48.22</td>
-        <td><b>77.230<br></td>
+        <td>-</td>
+        <td>47.872</td>
+        <td>75.137</td>
       </tr>  
       <tr>
-        <td colspan="14">Cascade System</td>
-      </tr>
-      <tr>
-        <td>Whisper+GPT-4o+CosyVoice</td>
-        <td><b>86.20<br></td>
-        <td>4.138</td>
-        <td><b>3.7500<br></td>
-        <td><b>4.474<br></td>
-        <td>4.955</td>
-        <td>3.625</td>
-        <td><b>4.2050<br></td>
-        <td><b>66.33<br></td>
-        <td>6.769</td>
+        <td>Cascade (Qwen3-8B)</td>
+        <td>75.75</td>
+        <td>83.9</td>
+        <td>4.303</td>
+        <td>4.417</td>
+        <td>9.365</td>
+        <td>4.900</td>
+        <td>84.50</td>
+        <td>71.56</td>
+        <td>47.2</td>
         <td>91.50</td>
         <td>-</td>
-        <td>90.79</td>
-        <td><b>80.291<br></td>
+        <td>-</td>
+        <td>88.189</td>
+        <td>79.041</td>
+      </tr>  
+      <tr>
+        <td>Qwen-Omni-Turbo</td>
+        <td>68.10</td>
+        <td>70.2</td>
+        <td>3.418</td>
+        <td>4.405</td>
+        <td>1.656</td>
+        <td>3.705</td>
+        <td>71.25</td>
+        <td>40.67</td>
+        <td>39.8</td>
+        <td>65.25</td>
+        <td>-</td>
+        <td>-</td>
+        <td>88.663</td>
+        <td>79.351</td>
+      </tr>
+      <tr>
+        <td>Cascade (GPT-4o)</td>
+        <td>91.60</td>
+        <td>86.9</td>
+        <td>4.120</td>
+        <td><b>4.474<br></td>
+        <td>4.955</td>
+        <td>4.240</td>
+        <td>74.25</td>
+        <td><b>77.67<br></td>
+        <td>53.9</td>
+        <td>91.50</td>
+        <td>-</td>
+        <td>-</td>
+        <td>88.876</td>
+        <td><b>82.682<br></td>
       </tr>  
     <thead>
       <tr>
