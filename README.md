@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-HuggingFace <a href="https://huggingface.co/datasets/VocalNet/VocalBench">🤗</a> |  Paper <a href="">📖</a> 
+HuggingFace <a href="https://huggingface.co/datasets/VocalNet/VocalBench">🤗</a> |  Paper <a href="">📖</a> | VocalBench-zh <a href="https://github.com/SJTU-OmniAgent/VocalBench-zh"> 🌟
 </p>
 <p align="center">
 Shanghai Jiao Tong University</a>  |  Ant Group</a> 
@@ -29,7 +29,7 @@ Shanghai Jiao Tong University</a>  |  Ant Group</a>
 ## 🎉 News
 
 - **2025.5**: The paper, datasets and paper of VocalBench are released, comprising systematic English conversational capability assessments.
-- **2025.11**: We have extended VocalBench to include Mandarin subsets for multilingual evaluations.
+- **2025.11**: We have extended VocalBench to include [Mandarin subsets](https://github.com/SJTU-OmniAgent/VocalBench-zh) for multilingual evaluations.
 - **2026.1**: We have updated the evaluation criteria, significantly expanded the model coverage, and updated the technical report.
 
 ## 📐 Evaluation Metrics
