@@ -26,7 +26,7 @@ Shanghai Jiao Tong University</a>  |  Ant Group</a>
 - **Chat**: Performance on effienct and smooth chat, consisting of single- and multi-round, instruction following, emotion-aware, safety alignment sets, and a real-time factor calculation representing the computing latency.
 - **Robustness**: Robustness under diverse acoustic environments, performing on white noise, background noise, reverberation, far-field, packet loss, and clipping distortion.
 
-## 👀 News
+## 🎉 News
 
 - **2025.5**: The paper, datasets and paper of VocalBench are released, comprising systematic English conversational capability assessments.
 - **2025.11**: We have extended VocalBench to include Mandarin subsets for multilingual evaluations.
@@ -576,7 +576,8 @@ python3 emotional_empathy_rate.py --semantic_json ../model_output/qwen3-omni/res
 - For Speech Recognition 
 
 ```bash
-python3 whisper_asr.py --input_json ../model_output/qwen3-omni/json/knowledge.json --output_json ../model_output/qwen3-omni/json_asr/knowledge.json --audio_dir ../model_output/qwen3-omni/wav/knowledge
+cd utils
+python3 whisper_asr/whisper_asr.py --input_json ../model_output/qwen3-omni/json/knowledge.json --output_json ../model_output/qwen3-omni/json_asr/knowledge.json --audio_dir ../model_output/qwen3-omni/wav/knowledge
 ```
 
 ## 🌞 Acknowledgements
