@@ -32,9 +32,14 @@ Shanghai Jiao Tong University</a>  |  Ant Group</a>
 - **2025.11**: We have extended VocalBench to include Mandarin subsets for multilingual evaluations.
 - **2026.1**: We have updated the evaluation criteria, significantly expanded the model coverage, and updated the technical report.
 
-## 🙌 Quick Start
+## 📐 Evaluation Metrics
 
-Evaluation Scripts will be uploaded soon.
+- Accuracy (ACC): For knowledge, reasoning, and multi-round evaluation, we use accuracy as an objective indicator.
+- Score: For literary creativity and single-round dialogue, we use LLM-as-a-Judge to score on a 1-5 range.
+- Preserve Rate (PR): For robustness evaluation, we define the preserve rate as the proportion of scores within noisy inputs compared to clean conditions.
+- Refusal Rate (RR) and Following Rate (FR): For safety alignment set, we report the refusal rate of each model. For instruction following set, we use following rate.
+- Emotional Empathy Rate (EER): For emotional empathy evaluation, we define emotional empathy rate as the proportion that model response shows empathy on both semantic meanings and acoustic tones.
+- UTMOS and word error rate (WER) are used for acoustic quality.  
 
 
 ## 🏆 Leaderboard
@@ -529,6 +534,50 @@ Evaluation Scripts will be uploaded soon.
 <br> 
 <br> 
 
+
+## 🙌 Quick Start
+
+- AK and Path Modification
+
+```python
+# utils/config.py
+
+keys = ["YOUR_QWEN_KEY_1",
+        "YOUR_QWEN_KEY_2",
+        "YOUR_QWEN_KEY_3"]
+EMOTION2VEC_PLUS_LARGE = '/workspace/tools/emotion2vec_plus_large'
+WHISPER_LARGE_V3 = '/workspace/tools/whisper'
+```
+
+```bash
+cd /workspace/tools/emotion2vec_plus_large
+echo -e "angry\nunuse_0\nunuse_1\nhappy\nneutral\nunuse_2\nsad\nsurprised\n<unk>" > tokens.txt
+```
+
+- Qwenmax-eval for Most Evaluation Sets
+
+```bash
+# e.g. knowledge
+cd utils
+python3 knowledge.py --input_json ../model_output/qwen3-omni/json/knowledge.json
+```
+
+- Additional Acoustic Constraints for Instruction Following and Emotional Empathy Set 
+```bash
+# e.g. Instruction Following
+python3 instruction_semantic.py --input_json ../model_output/qwen3-omni/json/instruction_following.json --output_json ../model_output/qwen3-omni/result/instruction_following.json
+python3 instruction_full.py --eval_json ../model_output/qwen3-omni/result/instruction_following.json
+# Emotional Empathy
+python3 emotion_semantic.py --input_json ../model_output/qwen3-omni/json/emotion.json --output_json ../model_output/qwen3-omni/result/emotion_semantic.json
+python3 emotion_acoustic.py --wav_dir ../model_output/qwen3-omni/wav/emotion --output_json ../model_output/qwen3-omni/result/emotion_acoustic.json
+python3 emotional_empathy_rate.py --semantic_json ../model_output/qwen3-omni/result/emotion_semantic.json --acoustic_json ../model_output/qwen3-omni/result/emotion_acoustic.json
+```
+
+- For Speech Recognition 
+
+```bash
+python3 whisper_asr.py --input_json ../model_output/qwen3-omni/json/knowledge.json --output_json ../model_output/qwen3-omni/json_asr/knowledge.json --audio_dir ../model_output/qwen3-omni/wav/knowledge
+```
 
 ## 🌞 Acknowledgements
 
