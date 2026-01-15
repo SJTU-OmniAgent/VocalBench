@@ -13,7 +13,7 @@ os.environ["QWEN_API_KEY"] = random.choice(keys)
 sys.path.append("./")
 
 
-def qwenmax_infer_instance(question, pred, category, qwenmax):
+def qwenmax_infer_instance(question, response, qwenmax):
     system_prompt = '''
 You are now an evaluator. You will be given a question that asks for practical advice or guidance, along with the model-generated response. Your task is to evaluate the response using a 5-point scale based on how helpful, accurate, complete, and relevant the advice is to the question.
 
@@ -29,7 +29,7 @@ Provide a brief explanation of your evaluation followed by the final score in sq
 
 The response gives clear and actionable steps that directly answer the question, though one suggestion could be more specific. Score: [4]
     '''
-    user_content = f"Question: {question}\n\n  Response: {pred}"
+    user_content = f"Question: {question}\n\n  Response: {response}"
     for i in range(10):
         messages = [
             {
@@ -74,14 +74,12 @@ def qwenmax_eval_json(input_json, output_json):
         response = instance["Response"]
         index = int(instance["Qid"].split('-')[-1])
         question = metadata[index]["Question"]
-        category = metadata[index]["Category"]
 
-
-        score, explain = qwenmax_infer_instance(question, response, category, qwenmax)
+        score, explain = qwenmax_infer_instance(question, response, qwenmax)
         eval_data.append({
             "Qid": instance["Qid"],
             "Question": question,
-            "Response": instance["response"],
+            "Response": response,
             "Score": score,
             "Explain": explain
         })
