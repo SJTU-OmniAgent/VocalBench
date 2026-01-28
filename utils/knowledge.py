@@ -14,7 +14,7 @@ def remove_sp(text):
     gt = gt.lstrip(" ")
     return gt
 
-def eval_knowledge(input_json, output_json):
+def eval_knowledge(input_json):
     english_normalizer = EnglishTextNormalizer()
     ref_json = '../json/knowledge.json'
     with open(ref_json, "r", encoding = 'utf-8') as f:
@@ -43,4 +43,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input_json", type=str)
     args = parser.parse_args()
-    eval_knowledge(args.input_json, args.output_json)
+    eval_knowledge(args.input_json)
